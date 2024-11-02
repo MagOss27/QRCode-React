@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>QRCode</title>
+</head>
+
+<body>
+    <script src="https://cdn.rawgit.com/davidshimjs/qrcodejs/gh-pages/qrcode.min.js"></script>
+
+<div class="form">
+  <h1>Gerador de QR code</h1>
+  <form>
+    <input type="url" id="website" name="website" placeholder="https://github.com/cemeterydriiver" required />
+    <button type="button" onclick="generateQRCode()">
+      Gerar 
+    </button>
+    <button type="button" onclick="clearQRCode()">
+        Limpar
+      </button>
+      <button onclick="downloadQRCode(generateQRCode())">Download</button>
+  </form>
+  <div id="qrcode-container">
+    <div id="qrcode" class="qrcode"></div>
+    <h4>Estilizado:</h4>
+    <div id="qrcode-2" class="qrcode"></div>
+  </div>
+
+  <script type="text/javascript" src="gerador.js">
+  </script>
+</div>
+<div id="scanner-container">
+    <h1>Scanear QR Code</h1>
+    <video id="scanner-video"></video>
+    <canvas id="scanner-canvas"></canvas>
+    <div class="buttons-container">
+        <button id="scanner-button">Scan</button>
+        <button id="stop-scan-button">Parar</button>
+        <button id="switch-camera-button"></button>
+      </div>
+</div>
+
+
+<script src="https://unpkg.com/@zxing/library@latest"></script>
+<script src="scaner.js"></script>
+
+</body>
+
+</html>
