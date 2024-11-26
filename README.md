@@ -10,7 +10,6 @@ Para rodar os projetos, siga as etapas gerais abaixo.
 
 ### 1. Clone o repositório:
 
-    ```bash
     git clone https://github.com/MagOss27/nome-do-repositorio.git
     cd nome-do-repositorio
 
